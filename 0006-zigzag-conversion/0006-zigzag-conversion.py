@@ -9,11 +9,8 @@ class Solution:
         direction = -1
 
         strings = [""]*rows
-
-        print(strings)
         
         while idx < length:
-            print(row)
             if row == 0 or row == rows-1:
                 direction = -direction
             strings[row] += s[idx]
