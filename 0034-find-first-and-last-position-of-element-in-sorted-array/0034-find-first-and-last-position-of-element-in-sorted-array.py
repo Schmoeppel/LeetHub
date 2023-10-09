@@ -6,9 +6,6 @@ class Solution:
 
         max_idx = len(nums)
         min_idx = 0
-
-        prev_max = -1
-        prev_min = -1
         idx = -1
         
         while True:
@@ -19,10 +16,8 @@ class Solution:
                 return [-1, -1]
     
             if nums[idx] < target:
-                prev_min = min_idx
                 min_idx = idx
             elif nums[idx] > target:
-                prev_max = max_idx
                 max_idx = idx
             if nums[idx] == target:
                 left = idx
@@ -33,14 +28,11 @@ class Solution:
                     right += 1 
                 left += 1
                 right -= 1 
-                #print(nums[idx])
                 return [left, right]
             
-            #print(f"min: {min_idx}, max: {max_idx}")
             if max_idx <= min_idx:
                 return [-1, -1]
 
-            #print(f"min: {min_idx}, max: {max_idx}")
             
 
 
