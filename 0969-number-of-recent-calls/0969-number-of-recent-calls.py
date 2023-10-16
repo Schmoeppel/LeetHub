@@ -10,7 +10,7 @@ class RecentCounter:
             if t-self.calls[idx] > 3000:
                 self.calls.pop(idx)
             else:
-                idx += 1
+                break
         return len(self.calls)
         
 
